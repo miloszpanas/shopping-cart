@@ -32,10 +32,6 @@
   color: #999;
 }
 
-.App-nav-item button:focus {
-  border: none;
-}
-
 .App-nav-item.selected {
   border-bottom-color: #ffaa3f;
 }
