@@ -1,16 +1,19 @@
-import React from 'react'
+import React from "react";
 
-export const Nav = ({onTabChange, activetab}) => {
+export const Nav = ({ onTabChange, activeTab }) => {
+  const itemClass = tabName =>
+    `App-nav-item ${activeTab === tabName ? "selected" : ""}`;
+
   return (
     <nav className="App-nav">
       <ul>
-        <li className="App-nav-item">
+        <li className={itemClass("items")}>
           <button onClick={() => onTabChange("items")}>Items</button>
         </li>
-        <li className="App-nav-item">
+        <li className={itemClass("cart")}>
           <button onClick={() => onTabChange("cart")}>Cart</button>
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
